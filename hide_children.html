@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Hide Children</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+
+    <style>
+
+        h1 {
+            color: maroon;
+        }
+
+        .task-name {
+            visibility: hidden;
+        }
+
+        tr.task-row:first-child .task-name {
+            visibility: visible;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<h1>Hide Children with CSS</h1>
+
+<table class="table table-sm">
+    <thead>
+    <tr>
+        <th>Task</th>
+        <th>Account</th>
+        <th>Complete?</th>
+        <th>Approved?</th>
+        <th>Logs</th>
+    </tr>
+    </thead>
+
+    <tbody>
+
+    </tbody>
+    <tr data-task-id="1" data-current-task-id="" class="task-row">
+        <td class="task-name">You should see me</td>
+        <td>STS-Master</td>
+        <td class="section-complete">
+            <i class="fas fa-check-circle"></i>
+        </td>
+        <td class="section-approved">
+            <i class="far fa-circle"></i>
+        </td>
+        <td>
+            <i class="fas fa-comment"></i>
+        </td>
+    </tr>
+    <tr data-task-id="1" data-current-task-id="1">
+        <td class="task-name">You should not see me</td>
+        <td>STS-LP</td>
+        <td class="section-complete">
+            <i class="fas fa-check-circle"></i>
+        </td>
+        <td class="section-approved">
+            <i class="far fa-circle"></i>
+        </td>
+        <td>
+            <i class="fas fa-comment"></i>
+        </td>
+    </tr>
+
+</table>
+</body>
+</html>
